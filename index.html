@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Volge — Coming Soon</title>
+<meta name="description" content="Volge is an engineering-led consultancy. Our new website is on its way.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+<style>
+  /* ---- Volge brand system (from the live site: shared/panache.css) ---- */
+  @font-face{font-family:'Cera Pro';src:url('assets/CeraPro-Light.woff2') format('woff2');font-weight:300;font-display:swap}
+  @font-face{font-family:'Cera Pro';src:url('assets/CeraPro-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+  :root{
+    --indigo:#1B1754;        /* void-indigo */
+    --indigo-mid:#173A80;    /* sovereign-ink */
+    --teal:#005A6B;          /* mariana-teal */
+    --azure:#007CA6;         /* spark-azure  */
+    --jade:#48B5C2;          /* jade-mist    */
+    --bora:#00C7B4;          /* bora-green   */
+    --ink:#FFFFFF;
+    --display:'Cera Pro',system-ui,sans-serif;
+    --body:'Inter',system-ui,sans-serif;
+    color-scheme:dark;
+  }
+  /* Layout: Volge inner-page hero as a full-height holding page — logo top, one headline leads, badge + contact quiet */
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  html{background:var(--indigo)}
+  body{
+    margin:0;color:var(--ink);font-family:var(--body);
+    background:linear-gradient(135deg,#1B1754 0%,#173A80 60%,#005A6B 100%);
+    background-attachment:fixed;
+    min-height:100%;position:relative;
+  }
+  body::before{   /* the site's own azure wash, static */
+    content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:radial-gradient(ellipse 60% 80% at 82% 42%,rgba(0,167,201,.18) 0%,transparent 70%);
+  }
+  .shell{
+    position:relative;z-index:1;
+    min-height:100%;display:flex;flex-direction:column;
+    max-width:1200px;margin:0 auto;
+    padding-block:clamp(22px,4vh,40px);
+    padding-left:max(clamp(24px,5vw,64px),env(safe-area-inset-left,0px));
+    padding-right:max(clamp(24px,5vw,64px),env(safe-area-inset-right,0px));
+  }
+  .top{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .logo{height:38px;width:auto;display:block;filter:brightness(0) invert(1)}
+  .contact{
+    font-size:13.5px;color:rgba(255,255,255,.55);text-decoration:none;
+    transition:color .18s ease;
+  }
+  .contact:hover{color:#fff}
+  .contact:focus-visible{outline:2px solid var(--jade);outline-offset:4px;border-radius:3px;color:#fff}
+  main{flex:1;display:flex;flex-direction:column;justify-content:center;padding-block:clamp(40px,9vh,96px)}
+  .eyebrow{
+    font-family:var(--display);font-weight:700;font-size:11px;
+    letter-spacing:.22em;text-transform:uppercase;
+    color:rgba(255,255,255,.42);margin:0 0 18px;
+  }
+  h1{
+    font-family:var(--display);font-weight:700;
+    font-size:clamp(2.5rem,6.4vw,4.4rem);line-height:1.04;letter-spacing:-.025em;
+    color:#fff;margin:0;max-width:16ch;text-wrap:balance;
+  }
+  h1 .accent{   /* the single accent moment — jade-azure, the brand's signature */
+    background:linear-gradient(120deg,var(--azure) 0%,var(--jade) 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .sub{
+    font-size:clamp(1rem,2.1vw,1.15rem);line-height:1.65;
+    color:rgba(255,255,255,.6);margin:26px 0 0;max-width:56ch;
+  }
+  .badge{
+    align-self:flex-start;display:inline-flex;align-items:center;gap:9px;
+    margin-top:34px;padding:9px 16px;border-radius:999px;
+    background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);
+    font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.04em;
+    color:rgba(255,255,255,.66);
+  }
+  .foot{
+    display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;align-items:center;
+    padding-top:22px;border-top:1px solid rgba(255,255,255,.1);
+    font-size:12.5px;color:rgba(255,255,255,.42);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  .foot a{color:rgba(255,255,255,.6);text-decoration:none}
+  .foot a:hover{color:#fff}
+  @media (max-width:520px){ .contact{display:none} }
+</style>
+</head>
+<body>
+  <div class="shell">
+    <header class="top">
+      <img class="logo" src="assets/volge-logo.png" alt="Volge" width="397" height="154">
+      <a class="contact" href="mailto:info@volge.com">info@volge.com</a>
+    </header>
+
+    <main>
+      <p class="eyebrow">Engineering-led Technology Consultancy</p>
+      <h1>Something <span class="accent">new</span> is taking shape.</h1>
+      <p class="sub">Volge is an engineering-led consultancy. Our Forward Deployed Engineers embed inside enterprise teams to deliver AI, cloud and transformation programmes. Our new website is on its way.</p>
+      <span class="badge">New site launching soon</span>
+    </main>
+
+    <footer class="foot">
+      <span>© 2026 Volge. All rights reserved.</span>
+      <span>Enquiries · <a href="mailto:info@volge.com">info@volge.com</a></span>
+    </footer>
+  </div>
+</body>
+</html>
